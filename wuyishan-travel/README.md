@@ -19,7 +19,7 @@ node server.js
 - `AMAP_JS_API_KEY`：高德开放平台 Web 端（JS API）Key
 - `AMAP_SECURITY_JS_CODE`：该 Key 对应的安全密钥
 
-在 Cloudflare Pages 项目的 Settings → Variables and Secrets 中为 Production 设置上述变量，然后重新部署。高德开放平台侧应将 Web Key 限定到生产网站域名。`functions/api/amap-config.js` 为页面提供运行时配置。
+在 Cloudflare Pages 项目的 Settings → Variables and Secrets 中，将上述两个值作为 Production Secrets 加密保存，然后重新部署。高德开放平台侧应将 Web Key 限定到生产网站域名。`functions/api/amap-config.js` 为页面提供运行时配置；密钥不提交到 GitHub。
 
 部署项目时，Pages 的根目录需要指向本目录，使 `index.html` 与 `functions/` 一起发布。
 
